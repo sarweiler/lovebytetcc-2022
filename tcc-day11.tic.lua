@@ -36,16 +36,17 @@ function TIC()
       angle
       )
      )
+   end
   end
-end
-end
+ end
 
-table.sort(points,function (a,b) return a.z>b.z end)
+ table.sort(points,function (a,b) return a.z>b.z end)
 
-for i=1,#points do
- for j=0,2 do
-  circ(120+6e2*points[i].x/points[i].z-j/2,68+6e2*points[i].y/points[i].z-j/2,3-j,
+ for i=1,#points do
+  for j=0,2 do
+   circ(120+6e2*points[i].x/points[i].z-j/2,68+6e2*points[i].y/points[i].z-j/2,3-j,
        (math.sin(points[i].x/10+angle)-math.sin(points[i].y/50-angle)*10)-j)
-end
-end
+  end
+ end
+ 
 end
